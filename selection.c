@@ -70,3 +70,15 @@ void imprimir_vetor(int *vetor, unsigned long tam)
 	}
 	printf("\n");
 }
+
+
+int validador(int *vetor, unsigned long tam)
+{
+	unsigned long i;
+	for (i = 0; i < tam - 1; i++) {
+		if (vetor[i] > vetor[i + 1]) {
+			return 0;
+		}
+	}
+	return 1;
+}
