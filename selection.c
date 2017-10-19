@@ -53,7 +53,7 @@ void selection_sort(int *vetor, unsigned long tam)
 			if (vetor[j] < vetor[min]) { 
          			min = j;
 			}
-     		}
+ 		}
 		if (vetor[i] != vetor[min]) {
 			aux = vetor[i];
 			vetor[i] = vetor[min];

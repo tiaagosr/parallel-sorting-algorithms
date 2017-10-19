@@ -3,7 +3,7 @@
 #include <sys/time.h>
 #include <omp.h>
 
-void bubble_sort(int *, unsigned long, unsigned long chunkSize, int numThreads);
+void bubble_sort(int *, unsigned long, int numThreads);
 void imprimir_vetor(int *, unsigned long);
 
 int main(int argc, char *argv[])
@@ -39,7 +39,7 @@ int main(int argc, char *argv[])
 	}
 
 	gettimeofday(&timevalA, NULL);
-	bubble_sort(vetor, tam, chunkSize, numThreads);
+	bubble_sort(vetor, tam, numThreads);
 	gettimeofday(&timevalB, NULL);
 
 	printf("%lf\n", timevalB.tv_sec - timevalA.tv_sec + (timevalB.tv_usec - timevalA.tv_usec) / (double) 1000000);
@@ -50,7 +50,7 @@ int main(int argc, char *argv[])
 	return EXIT_SUCCESS;
 }
 
-void bubble_sort(int *vetor, unsigned long tam, unsigned long chunkSize, int numThreads)
+void bubble_sort(int *vetor, unsigned long tam, int numThreads)
 {
 	unsigned long i, j, inicio;
 	int aux;
