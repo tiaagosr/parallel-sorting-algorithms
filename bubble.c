@@ -5,6 +5,7 @@
 
 void bubble_sort(int *, unsigned long, unsigned long chunkSize, int numThreads);
 void imprimir_vetor(int *, unsigned long);
+int validador(int *, unsigned long);
 
 int main(int argc, char *argv[])
 {
