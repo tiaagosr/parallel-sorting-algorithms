@@ -17,9 +17,9 @@ do
 	echo Inicando execução do script "$script" com "$execucoes" execuções, utilizando "$p" threads
 	for i in $(seq 1 $execucoes)
 	do
-		output=$(./"$script" "$tamanho" "$p")
-		sum=$(($sum + $output))
-		#echo "$p" $output >> resultados/"$script".txt
+		#output=$(./"$script" "$tamanho" "$p")
+		#sum=$(($sum + $output))
+		echo "$p" $output >> resultados/"$script".txt
 	done
 	echo sum: $sum
 done
